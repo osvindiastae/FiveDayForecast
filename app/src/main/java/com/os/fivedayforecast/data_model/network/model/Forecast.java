@@ -22,7 +22,7 @@ public class Forecast {
     private Integer cnt;
     @SerializedName("list")
     @Expose
-    private List<Report> list = null;
+    private List<Report> reports = null;
     @SerializedName("city")
     @Expose
     private City city;
@@ -51,12 +51,12 @@ public class Forecast {
         this.cnt = cnt;
     }
 
-    public List<Report> getList() {
-        return list;
+    public List<Report> getReports() {
+        return reports;
     }
 
-    public void setList(List<Report> list) {
-        this.list = list;
+    public void setReports(List<Report> reports) {
+        this.reports = reports;
     }
 
     public City getCity() {

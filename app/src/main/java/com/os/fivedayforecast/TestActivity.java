@@ -38,6 +38,8 @@ public class TestActivity extends AppCompatActivity {
                         // pass
                         Toast.makeText(TestActivity.this, "CITY: " + forecast.getCity().getName(), Toast.LENGTH_SHORT).show();
                         Log.i(MyApp.TAG, "CITY: " + forecast.getCity().getName());
+                        Log.i(MyApp.TAG, "RESULT SIZE: " + forecast.getReports().size());
+
                     }
                 }, new Consumer<Throwable>() {
                     @Override
