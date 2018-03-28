@@ -2,18 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
-
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
-
-    <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_day_1"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="DAY 1" />
+    <!--android:icon="@drawable/ic_home_black_24dp"-->
+
+    <item
+        android:id="@+id/navigation_day_2"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="DAY 2" />
+    <!--android:icon="@drawable/ic_dashboard_black_24dp"-->
+
+    <item
+        android:id="@+id/navigation_day_3"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="DAY 3" />
+    <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+
+    <item
+        android:id="@+id/navigation_day_4"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="DAY 4" />
+    <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+
+    <item
+        android:id="@+id/navigation_day_5"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="DAY 5" />
+    <!--android:icon="@drawable/ic_notifications_black_24dp"-->
 
 </menu>
