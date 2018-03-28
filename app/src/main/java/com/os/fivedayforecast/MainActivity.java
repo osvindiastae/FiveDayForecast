@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void accept(Forecast forecast) throws Exception {
                         // pass
-                        recyclerView.setAdapter(new ForecastAdapter(forecast,R.layout.row_forecast,getApplicationContext()));
+                        recyclerView.setAdapter(new ForecastAdapter(forecast.getReports(),R.layout.row_forecast,getApplicationContext()));
                         Toast.makeText(getApplicationContext(), "CITY: " + forecast.getCity().getName(), Toast.LENGTH_SHORT).show();
                         Log.i(MyApp.TAG, "CITY: " + forecast.getCity().getName());
                         Log.i(MyApp.TAG, "RESULT SIZE: " + forecast.getReports().size());

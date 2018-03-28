@@ -11,9 +11,9 @@ import java.util.List;
 
 public class Report {
 
-    @SerializedName("dt")
+    @SerializedName("dateTimeNumber")
     @Expose
-    private Integer dt;
+    private Integer dateTimeNumber;
     @SerializedName("main")
     @Expose
     private MainBody mainBody;
@@ -32,16 +32,16 @@ public class Report {
     @SerializedName("sys")
     @Expose
     private Sys sys;
-    @SerializedName("dt_txt")
+    @SerializedName("dateTimeText")
     @Expose
-    private String dtTxt;
+    private String dateTimeText;
 
-    public Integer getDt() {
-        return dt;
+    public Integer getDateTimeNumber() {
+        return dateTimeNumber;
     }
 
-    public void setDt(Integer dt) {
-        this.dt = dt;
+    public void setDateTimeNumber(Integer dateTimeNumber) {
+        this.dateTimeNumber = dateTimeNumber;
     }
 
     public MainBody getMainBody() {
@@ -92,12 +92,12 @@ public class Report {
         this.sys = sys;
     }
 
-    public String getDtTxt() {
-        return dtTxt;
+    public String getDateTimeText() {
+        return dateTimeText;
     }
 
-    public void setDtTxt(String dtTxt) {
-        this.dtTxt = dtTxt;
+    public void setDateTimeText(String dateTimeText) {
+        this.dateTimeText = dateTimeText;
     }
 
 }

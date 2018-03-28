@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.os.fivedayforecast.data_model.network.model.Forecast;
+import com.os.fivedayforecast.data_model.network.model.Report;
+
+import java.util.List;
 
 /**
  * Created by Os on 28/03/2018.
@@ -15,12 +18,12 @@ import com.os.fivedayforecast.data_model.network.model.Forecast;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.MyViewHolder> {
 
-    private Forecast forecast;
+    private List<Report> reports;
     private int row_forecast;
     private Context applicationContext;
 
-    public ForecastAdapter(Forecast forecast, int row_forecast, Context applicationContext) {
-        this.forecast = forecast;
+    public ForecastAdapter(List<Report> reports, int row_forecast, Context applicationContext) {
+        this.reports = reports;
         this.row_forecast = row_forecast;
         this.applicationContext = applicationContext;
     }
@@ -32,13 +35,14 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.MyView
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.tvCurrentTemperature.setText(forecast.getReports().get(position).getMainBody().getTemp().toString() + " °C");
-        holder.tvTime.setText(forecast.getReports().get(position).getDtTxt());
+        holder.tvCurrentTemperature.setText(reports.get(position).getMainBody().getTemp().toString() + " °C");
+        holder.tvTime.setText(reports.get(position).getDateTimeText());
     }
 
     @Override
     public int getItemCount() {
-        return forecast.getReports().size();
+        return 10;
+//        return forecast.getReports().size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
