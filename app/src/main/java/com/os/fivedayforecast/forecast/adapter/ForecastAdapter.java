@@ -35,13 +35,14 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.MyView
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.tvCurrentTemperature.setText(reports.get(position).getMainBody().getTemp().toString() + " °C");
+        holder.tvCurrentTemperature.setText(reports.get(position).getMainBody().getTemp().toString() + "°C");
+        holder.tvMaximumTemperature.setText(reports.get(position).getMainBody().getTempMax().toString() + "°C");
+        holder.tvMinimumTemperature.setText(reports.get(position).getMainBody().getTempMin().toString() + "°C");
         holder.tvTime.setText(reports.get(position).getDateTimeText());
     }
 
     @Override
     public int getItemCount() {
-//        return 10;
         return reports.size();
     }
 

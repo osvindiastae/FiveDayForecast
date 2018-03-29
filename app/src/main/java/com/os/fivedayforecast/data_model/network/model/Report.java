@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Report {
 
-    @SerializedName("dateTimeNumber")
+    @SerializedName("dt")
     @Expose
     private Integer dateTimeNumber;
     @SerializedName("main")
@@ -32,7 +32,7 @@ public class Report {
     @SerializedName("sys")
     @Expose
     private Sys sys;
-    @SerializedName("dateTimeText")
+    @SerializedName("dt_txt")
     @Expose
     private String dateTimeText;
 
