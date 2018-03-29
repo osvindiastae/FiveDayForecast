@@ -2,6 +2,7 @@ package com.os.fivedayforecast.data_model.network;
 
 import com.os.fivedayforecast.data_model.network.model.Forecast;
 import com.os.fivedayforecast.data_model.network.services.IRequestInterface;
+import com.os.fivedayforecast.data_model.network.services.ServiceConnection;
 
 import io.reactivex.Observable;
 
@@ -12,8 +13,8 @@ import io.reactivex.Observable;
 public class APIHelper implements IAPIHelper {
     private IRequestInterface iRequestInterface;
 
-    public APIHelper(IRequestInterface iRequestInterface) {
-        this.iRequestInterface = iRequestInterface;
+    public APIHelper() {
+        this.iRequestInterface = ServiceConnection.getConnection();
     }
 
     @Override

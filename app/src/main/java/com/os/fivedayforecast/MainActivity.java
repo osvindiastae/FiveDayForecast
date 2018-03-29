@@ -3,8 +3,8 @@ package com.os.fivedayforecast;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 import com.os.fivedayforecast.data_model.network.model.Forecast;
 import com.os.fivedayforecast.data_model.network.services.IRequestInterface;
-import com.os.fivedayforecast.data_model.network.services.ServiceConnection;
+import com.os.fivedayforecast.forecast.ForecastFragment;
+import com.os.fivedayforecast.forecast.adapter.ForecastAdapter;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -21,10 +22,12 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Declare the fragment manager
+    private FragmentManager fragmentManager;
+
     private TextView mTextMessage;
     private IRequestInterface requestInterface;
     private RecyclerView recyclerView;
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -57,13 +60,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // initialise the fragment manager
+        fragmentManager = getSupportFragmentManager();
+
+        // load the fragment as default
+        if (savedInstanceState == null) {
+            fragmentManager.beginTransaction()
+                    .add(R.id.fragmentContainer, new ForecastFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
+
+
         // get service connection
-        requestInterface = ServiceConnection.getConnection();
+//        requestInterface = ServiceConnection.getConnection();
 
-        recyclerView = (RecyclerView) findViewById(R.id.rvForecast);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView = (RecyclerView) findViewById(R.id.rvForecast);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        LoadWeatherForecast();
+        //LoadWeatherForecast();
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

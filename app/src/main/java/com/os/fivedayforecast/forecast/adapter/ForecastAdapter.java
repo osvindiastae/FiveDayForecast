@@ -1,4 +1,4 @@
-package com.os.fivedayforecast;
+package com.os.fivedayforecast.forecast.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.os.fivedayforecast.data_model.network.model.Forecast;
+import com.os.fivedayforecast.R;
 import com.os.fivedayforecast.data_model.network.model.Report;
 
 import java.util.List;
