@@ -5,13 +5,17 @@
     tools:context="com.os.fivedayforecast.forecast.ForecastFragment">
 
 
-    <android.support.v7.widget.RecyclerView
-    android:id="@+id/rvForecast"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="53dp"
-    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvForecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="53dp"
+            >
 
-    </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
 </FrameLayout>

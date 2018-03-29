@@ -41,8 +41,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return 10;
-//        return forecast.getReports().size();
+//        return 10;
+        return reports.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
